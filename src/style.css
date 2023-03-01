@@ -1,0 +1,130 @@
+:root {
+    --white: hsl(0, 0%, 100%);
+    --light-gray: hsl(212, 45%, 89%);
+    --grayish-blue: hsl(220, 15%, 55%);
+    --dark-blue: hsl(218, 44%, 22%);
+
+    --font-fam-outfit: 'Outfit', sans-serif;
+    --font-size: 15px;
+    --fw400: 400;
+    --fw700: 700;
+}
+
+/* CSS RESET */
+
+
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  * {
+    margin: 0;
+  }
+  html, body {
+    height: 100%;
+  }
+  body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+  img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+  }
+  input, button, textarea, select {
+    font: inherit;
+  }
+  p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+  }
+  #root, #__next {
+    isolation: isolate;
+  }
+
+
+/* GENERAL STYLING */
+* {
+    font-family: var(--font-fam-outfit);
+}
+
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--light-gray);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    background-color: var(--white);
+    max-height: auto;
+    margin: 1rem;
+    border-radius: 8px;
+    -webkit-box-shadow: 0px 4px 37px -1px rgba(0,0,0,0.44); 
+    box-shadow: 0px 3px 25px -15px rgba(0,0,0,0.44);
+}
+
+.qr-code {
+    border-radius: 8px;
+}
+
+.flex-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0.875rem;
+    margin-bottom: 0.5em;
+}
+
+.flex-title {
+    line-height: 1.2;
+    font-size: 1.5rem;
+    padding: 0.5em 0 0.5em 0;
+    font-weight: var(--fw700);
+    text-align: center;
+}
+
+.flex-p {
+    text-align: center;
+    color: var(--grayish-blue);
+}
+
+
+/* MEDIA QUERIES */
+
+@media (min-width: 600px) {
+    .container {
+        max-width: 50%;
+    }
+}
+
+@media (min-width: 1000px) {
+    .container {
+        width: 30%;
+    }
+
+    .flex-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 1400px) {
+    .container {
+        width: 22%;
+    }
+
+    .flex-title {
+        font-size: 1.3rem;
+    }
+}
+
+@media (min-width: 2750px) {
+    .container {
+        width: 20%
+    }
+
+    .flex-wrapper > * {
+        width: 100%;
+    }
+}
